@@ -11,8 +11,8 @@ object AdditionalTasks {
 
     val flightData2015 = spark
       .read
-      .option("inferSchema", true)
-      .option("header", true)
+      .option("inferSchema", value = true)
+      .option("header", value = true)
       .csv("src/main/resources/2015-summary.csv")
 
     flightData2015.createOrReplaceTempView("flight_data_2015")
